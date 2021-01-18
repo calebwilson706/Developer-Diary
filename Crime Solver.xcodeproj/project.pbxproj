@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */; };
+		ABE5806225B60BF000C511A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5806125B60BF000C511A2 /* ContentView.swift */; };
+		ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806325B60BF100C511A2 /* Assets.xcassets */; };
+		ABE5806725B60BF100C511A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806625B60BF100C511A2 /* Preview Assets.xcassets */; };
+		ABE5807325B60BF100C511A2 /* Crime_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5807225B60BF100C511A2 /* Crime_SolverTests.swift */; };
+		ABE5807E25B60BF100C511A2 /* Crime_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5807D25B60BF100C511A2 /* Crime_SolverUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABE5806F25B60BF100C511A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABE5805425B60BF000C511A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABE5805B25B60BF000C511A2;
+			remoteInfo = "Crime Solver";
+		};
+		ABE5807A25B60BF100C511A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABE5805425B60BF000C511A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABE5805B25B60BF000C511A2;
+			remoteInfo = "Crime Solver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABE5805C25B60BF000C511A2 /* Crime Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverApp.swift; sourceTree = "<group>"; };
+		ABE5806125B60BF000C511A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ABE5806325B60BF100C511A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABE5806625B60BF100C511A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABE5806825B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE5806925B60BF100C511A2 /* Crime_Solver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crime_Solver.entitlements; sourceTree = "<group>"; };
+		ABE5806E25B60BF100C511A2 /* Crime SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crime SolverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE5807225B60BF100C511A2 /* Crime_SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverTests.swift; sourceTree = "<group>"; };
+		ABE5807425B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE5807925B60BF100C511A2 /* Crime SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crime SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE5807D25B60BF100C511A2 /* Crime_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverUITests.swift; sourceTree = "<group>"; };
+		ABE5807F25B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABE5805925B60BF000C511A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE5806B25B60BF100C511A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE5807625B60BF100C511A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABE5805325B60BF000C511A2 = {
+			isa = PBXGroup;
+			children = (
+				ABE5805E25B60BF000C511A2 /* Crime Solver */,
+				ABE5807125B60BF100C511A2 /* Crime SolverTests */,
+				ABE5807C25B60BF100C511A2 /* Crime SolverUITests */,
+				ABE5805D25B60BF000C511A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABE5805D25B60BF000C511A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE5805C25B60BF000C511A2 /* Crime Solver.app */,
+				ABE5806E25B60BF100C511A2 /* Crime SolverTests.xctest */,
+				ABE5807925B60BF100C511A2 /* Crime SolverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE5805E25B60BF000C511A2 /* Crime Solver */ = {
+			isa = PBXGroup;
+			children = (
+				ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */,
+				ABE5806125B60BF000C511A2 /* ContentView.swift */,
+				ABE5806325B60BF100C511A2 /* Assets.xcassets */,
+				ABE5806825B60BF100C511A2 /* Info.plist */,
+				ABE5806925B60BF100C511A2 /* Crime_Solver.entitlements */,
+				ABE5806525B60BF100C511A2 /* Preview Content */,
+			);
+			path = "Crime Solver";
+			sourceTree = "<group>";
+		};
+		ABE5806525B60BF100C511A2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ABE5806625B60BF100C511A2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ABE5807125B60BF100C511A2 /* Crime SolverTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABE5807225B60BF100C511A2 /* Crime_SolverTests.swift */,
+				ABE5807425B60BF100C511A2 /* Info.plist */,
+			);
+			path = "Crime SolverTests";
+			sourceTree = "<group>";
+		};
+		ABE5807C25B60BF100C511A2 /* Crime SolverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABE5807D25B60BF100C511A2 /* Crime_SolverUITests.swift */,
+				ABE5807F25B60BF100C511A2 /* Info.plist */,
+			);
+			path = "Crime SolverUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE5805B25B60BF000C511A2 /* Crime Solver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE5808225B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime Solver" */;
+			buildPhases = (
+				ABE5805825B60BF000C511A2 /* Sources */,
+				ABE5805925B60BF000C511A2 /* Frameworks */,
+				ABE5805A25B60BF000C511A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crime Solver";
+			productName = "Crime Solver";
+			productReference = ABE5805C25B60BF000C511A2 /* Crime Solver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABE5806D25B60BF100C511A2 /* Crime SolverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE5808525B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverTests" */;
+			buildPhases = (
+				ABE5806A25B60BF100C511A2 /* Sources */,
+				ABE5806B25B60BF100C511A2 /* Frameworks */,
+				ABE5806C25B60BF100C511A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABE5807025B60BF100C511A2 /* PBXTargetDependency */,
+			);
+			name = "Crime SolverTests";
+			productName = "Crime SolverTests";
+			productReference = ABE5806E25B60BF100C511A2 /* Crime SolverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABE5807825B60BF100C511A2 /* Crime SolverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE5808825B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverUITests" */;
+			buildPhases = (
+				ABE5807525B60BF100C511A2 /* Sources */,
+				ABE5807625B60BF100C511A2 /* Frameworks */,
+				ABE5807725B60BF100C511A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABE5807B25B60BF100C511A2 /* PBXTargetDependency */,
+			);
+			name = "Crime SolverUITests";
+			productName = "Crime SolverUITests";
+			productReference = ABE5807925B60BF100C511A2 /* Crime SolverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE5805425B60BF000C511A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					ABE5805B25B60BF000C511A2 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					ABE5806D25B60BF100C511A2 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = ABE5805B25B60BF000C511A2;
+					};
+					ABE5807825B60BF100C511A2 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = ABE5805B25B60BF000C511A2;
+					};
+				};
+			};
+			buildConfigurationList = ABE5805725B60BF000C511A2 /* Build configuration list for PBXProject "Crime Solver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABE5805325B60BF000C511A2;
+			productRefGroup = ABE5805D25B60BF000C511A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE5805B25B60BF000C511A2 /* Crime Solver */,
+				ABE5806D25B60BF100C511A2 /* Crime SolverTests */,
+				ABE5807825B60BF100C511A2 /* Crime SolverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE5805A25B60BF000C511A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE5806725B60BF100C511A2 /* Preview Assets.xcassets in Resources */,
+				ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE5806C25B60BF100C511A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE5807725B60BF100C511A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABE5805825B60BF000C511A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE5806225B60BF000C511A2 /* ContentView.swift in Sources */,
+				ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE5806A25B60BF100C511A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE5807325B60BF100C511A2 /* Crime_SolverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE5807525B60BF100C511A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE5807E25B60BF100C511A2 /* Crime_SolverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABE5807025B60BF100C511A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABE5805B25B60BF000C511A2 /* Crime Solver */;
+			targetProxy = ABE5806F25B60BF100C511A2 /* PBXContainerItemProxy */;
+		};
+		ABE5807B25B60BF100C511A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABE5805B25B60BF000C511A2 /* Crime Solver */;
+			targetProxy = ABE5807A25B60BF100C511A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ABE5808025B60BF100C511A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABE5808125B60BF100C511A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ABE5808325B60BF100C511A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Crime Solver/Crime_Solver.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Crime Solver/Preview Content\"";
+				DEVELOPMENT_TEAM = NBY2AG34M4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Crime Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ABE5808425B60BF100C511A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Crime Solver/Crime_Solver.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Crime Solver/Preview Content\"";
+				DEVELOPMENT_TEAM = NBY2AG34M4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Crime Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ABE5808625B60BF100C511A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = NBY2AG34M4;
+				INFOPLIST_FILE = "Crime SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crime Solver.app/Contents/MacOS/Crime Solver";
+			};
+			name = Debug;
+		};
+		ABE5808725B60BF100C511A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = NBY2AG34M4;
+				INFOPLIST_FILE = "Crime SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crime Solver.app/Contents/MacOS/Crime Solver";
+			};
+			name = Release;
+		};
+		ABE5808925B60BF100C511A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = NBY2AG34M4;
+				INFOPLIST_FILE = "Crime SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Crime Solver";
+			};
+			name = Debug;
+		};
+		ABE5808A25B60BF100C511A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = NBY2AG34M4;
+				INFOPLIST_FILE = "Crime SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Crime Solver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE5805725B60BF000C511A2 /* Build configuration list for PBXProject "Crime Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE5808025B60BF100C511A2 /* Debug */,
+				ABE5808125B60BF100C511A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE5808225B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE5808325B60BF100C511A2 /* Debug */,
+				ABE5808425B60BF100C511A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE5808525B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE5808625B60BF100C511A2 /* Debug */,
+				ABE5808725B60BF100C511A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE5808825B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE5808925B60BF100C511A2 /* Debug */,
+				ABE5808A25B60BF100C511A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE5805425B60BF000C511A2 /* Project object */;
+}
