@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB10AF5925B6F7DA00073BD6 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5625B6F7DA00073BD6 /* Montserrat-Bold.ttf */; };
+		AB10AF5A25B6F7DA00073BD6 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5725B6F7DA00073BD6 /* Montserrat-Regular.ttf */; };
+		AB10AF5B25B6F7DA00073BD6 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5825B6F7DA00073BD6 /* Montserrat-Italic.ttf */; };
+		AB7F551725B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551425B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf */; };
+		AB7F551825B64C5D00DB52AB /* SourceCodePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551525B64C5D00DB52AB /* SourceCodePro-Light.ttf */; };
+		AB7F551925B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551625B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf */; };
+		AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */; };
+		AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552925B6545D00DB52AB /* HeaderView.swift */; };
+		AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552E25B6558500DB52AB /* FooterView.swift */; };
 		ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */; };
-		ABE5806225B60BF000C511A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5806125B60BF000C511A2 /* ContentView.swift */; };
+		ABE5806225B60BF000C511A2 /* TitleScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5806125B60BF000C511A2 /* TitleScreenView.swift */; };
 		ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806325B60BF100C511A2 /* Assets.xcassets */; };
 		ABE5806725B60BF100C511A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806625B60BF100C511A2 /* Preview Assets.xcassets */; };
 		ABE5807325B60BF100C511A2 /* Crime_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5807225B60BF100C511A2 /* Crime_SolverTests.swift */; };
@@ -33,9 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB10AF5625B6F7DA00073BD6 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		AB10AF5725B6F7DA00073BD6 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		AB10AF5825B6F7DA00073BD6 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		AB7F551425B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AB7F551525B64C5D00DB52AB /* SourceCodePro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Light.ttf"; sourceTree = "<group>"; };
+		AB7F551625B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-SemiBold.ttf"; sourceTree = "<group>"; };
+		AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenModifiers.swift; sourceTree = "<group>"; };
+		AB7F552925B6545D00DB52AB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AB7F552E25B6558500DB52AB /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		ABE5805C25B60BF000C511A2 /* Crime Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverApp.swift; sourceTree = "<group>"; };
-		ABE5806125B60BF000C511A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ABE5806125B60BF000C511A2 /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
 		ABE5806325B60BF100C511A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE5806625B60BF100C511A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ABE5806825B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +91,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB7F551325B64C4D00DB52AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AB10AF5625B6F7DA00073BD6 /* Montserrat-Bold.ttf */,
+				AB10AF5825B6F7DA00073BD6 /* Montserrat-Italic.ttf */,
+				AB10AF5725B6F7DA00073BD6 /* Montserrat-Regular.ttf */,
+				AB7F551425B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf */,
+				AB7F551525B64C5D00DB52AB /* SourceCodePro-Light.ttf */,
+				AB7F551625B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AB7F552025B64D7500DB52AB /* TitleScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ABE5806125B60BF000C511A2 /* TitleScreenView.swift */,
+				AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */,
+				AB7F552925B6545D00DB52AB /* HeaderView.swift */,
+				AB7F552E25B6558500DB52AB /* FooterView.swift */,
+			);
+			path = TitleScreen;
+			sourceTree = "<group>";
+		};
+		AB7F553925B6577200DB52AB /* Extensions_UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions_UI;
+			sourceTree = "<group>";
+		};
 		ABE5805325B60BF000C511A2 = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +145,10 @@
 		ABE5805E25B60BF000C511A2 /* Crime Solver */ = {
 			isa = PBXGroup;
 			children = (
+				AB7F553925B6577200DB52AB /* Extensions_UI */,
+				AB7F552025B64D7500DB52AB /* TitleScreen */,
+				AB7F551325B64C4D00DB52AB /* Fonts */,
 				ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */,
-				ABE5806125B60BF000C511A2 /* ContentView.swift */,
 				ABE5806325B60BF100C511A2 /* Assets.xcassets */,
 				ABE5806825B60BF100C511A2 /* Info.plist */,
 				ABE5806925B60BF100C511A2 /* Crime_Solver.entitlements */,
@@ -236,7 +287,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE5806725B60BF100C511A2 /* Preview Assets.xcassets in Resources */,
+				AB7F551825B64C5D00DB52AB /* SourceCodePro-Light.ttf in Resources */,
+				AB10AF5A25B6F7DA00073BD6 /* Montserrat-Regular.ttf in Resources */,
+				AB10AF5B25B6F7DA00073BD6 /* Montserrat-Italic.ttf in Resources */,
+				AB10AF5925B6F7DA00073BD6 /* Montserrat-Bold.ttf in Resources */,
 				ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */,
+				AB7F551925B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf in Resources */,
+				AB7F551725B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +318,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE5806225B60BF000C511A2 /* ContentView.swift in Sources */,
+				ABE5806225B60BF000C511A2 /* TitleScreenView.swift in Sources */,
 				ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */,
+				AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */,
+				AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */,
+				AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

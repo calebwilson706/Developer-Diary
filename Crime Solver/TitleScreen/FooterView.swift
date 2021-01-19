@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct Footerview: View {
+struct FooterView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Created By Caleb Wilson.").foregroundColor(.gray).font(.footnote)
+            Spacer()
+        }.padding(.all)
     }
 }
 
-struct Footerview_Previews: PreviewProvider {
+struct FooterView_Previews: PreviewProvider {
     static var previews: some View {
-        Footerview()
+        FooterView()
     }
 }
