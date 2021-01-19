@@ -9,13 +9,42 @@ import SwiftUI
 
 struct TitleScreenView: View {
     @State var myWelcometext = "..."
+    @State var showIntroText = false
+    @State var isSecretText = false
+    @State var cementTitleInPlace = false
     
+    @ObservedObject var navText = SecretText(plain: "YES")
+    @ObservedObject var assignmentText = SecretText(plain: "Are You Ready For Your Assignement?")
+    @ObservedObject var welcomeTextEncoded = SecretText(plain: "Welcome Agent...")
     var welcometextAnimated : some View {
-        Text(myWelcometext)
-            .modifier(WelcomeText())
-            .onAppear {
-                self.loadWelcome(desiredEndString: "Welcome Agent...")
+        Group {
+            if !cementTitleInPlace {
+                Text(myWelcometext).onAppear {
+                    self.loadWelcome(desiredEndString: "Welcome Agent...")
+                }
+            } else {
+                SecretTextView(isSecret: $isSecretText, theSetOfStrings: welcomeTextEncoded)
             }
+        }.modifier(WelcomeText())
+    }
+    var introText : some View {
+        VStack {
+            if showIntroText {
+                SecretTextView(isSecret: $isSecretText, theSetOfStrings: assignmentText)
+                    .modifier(IntroText())
+                Group{
+                    Button(action: {
+                        print("open next view here")
+                    }){
+                        SecretTextView(isSecret: $isSecretText, theSetOfStrings: navText).modifier(NavLinkText())
+                    }.buttonStyle(NavLinkButtonStyleTitlePage())
+                }.onHover(perform: { hovering in
+                    withAnimation(.easeIn(duration : 0.3)) {
+                        self.isSecretText = hovering
+                    }
+                })
+            }
+        }.transition(.opacity)
     }
     var body: some View {
         ZStack {
@@ -23,7 +52,10 @@ struct TitleScreenView: View {
             VStack {
                 HeaderView()
                 Spacer()
-                welcometextAnimated
+                VStack{
+                    welcometextAnimated
+                    introText
+                }
                 Spacer()
                 FooterView()
             }
@@ -39,7 +71,12 @@ struct TitleScreenView: View {
                 }
                 Thread.sleep(forTimeInterval: 0.2)
             }
+            withAnimation(.easeInOut(duration : 1.1)) {
+                self.showIntroText.toggle()
+            }
+            self.cementTitleInPlace = true
         }
+        
     }
 }
 

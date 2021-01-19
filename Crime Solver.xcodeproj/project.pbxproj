@@ -10,6 +10,7 @@
 		AB10AF5925B6F7DA00073BD6 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5625B6F7DA00073BD6 /* Montserrat-Bold.ttf */; };
 		AB10AF5A25B6F7DA00073BD6 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5725B6F7DA00073BD6 /* Montserrat-Regular.ttf */; };
 		AB10AF5B25B6F7DA00073BD6 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5825B6F7DA00073BD6 /* Montserrat-Italic.ttf */; };
+		AB1F44E125B72D1600AC0630 /* SecretCodeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1F44E025B72D1600AC0630 /* SecretCodeClass.swift */; };
 		AB7F551725B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551425B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf */; };
 		AB7F551825B64C5D00DB52AB /* SourceCodePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551525B64C5D00DB52AB /* SourceCodePro-Light.ttf */; };
 		AB7F551925B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551625B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf */; };
@@ -45,6 +46,7 @@
 		AB10AF5625B6F7DA00073BD6 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		AB10AF5725B6F7DA00073BD6 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		AB10AF5825B6F7DA00073BD6 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		AB1F44E025B72D1600AC0630 /* SecretCodeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretCodeClass.swift; sourceTree = "<group>"; };
 		AB7F551425B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-BoldItalic.ttf"; sourceTree = "<group>"; };
 		AB7F551525B64C5D00DB52AB /* SourceCodePro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Light.ttf"; sourceTree = "<group>"; };
 		AB7F551625B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */,
 				AB7F552925B6545D00DB52AB /* HeaderView.swift */,
 				AB7F552E25B6558500DB52AB /* FooterView.swift */,
+				AB1F44E025B72D1600AC0630 /* SecretCodeClass.swift */,
 			);
 			path = TitleScreen;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */,
 				AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */,
 				AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */,
+				AB1F44E125B72D1600AC0630 /* SecretCodeClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
