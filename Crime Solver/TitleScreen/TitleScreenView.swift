@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct TitleScreenView: View {
-    @State var myWelcometext = "..."
-    @State var showIntroText = false
-    @State var isSecretText = false
-    @State var cementTitleInPlace = false
+    @State private var myWelcometext = "..."
+    @State private var showIntroText = false
+    @State private var isSecretText = false
+    @State private var cementTitleInPlace = false
+    
+    @State private var currSubViewIndex = 0
+    @State var nextViewShows = false
     
     @ObservedObject var navText = SecretText(plain: "YES")
     @ObservedObject var assignmentText = SecretText(plain: "Are You Ready For Your Assignement?")
@@ -34,7 +37,8 @@ struct TitleScreenView: View {
                     .modifier(IntroText())
                 Group{
                     Button(action: {
-                        print("open next view here")
+                        self.currSubViewIndex = 1
+                        self.nextViewShows.toggle()
                     }){
                         SecretTextView(isSecret: $isSecretText, theSetOfStrings: navText).modifier(NavLinkText())
                     }.buttonStyle(NavLinkButtonStyleTitlePage())
@@ -50,13 +54,22 @@ struct TitleScreenView: View {
         ZStack {
             Color.black
             VStack {
-                HeaderView()
-                Spacer()
-                VStack{
-                    welcometextAnimated
-                    introText
-                }
-                Spacer()
+                
+                StackNavigationView (
+                        currentSubviewIndex : self.$currSubViewIndex,
+                        showingSubview : self.$nextViewShows,
+                        subviewByIndex: { index in
+                            subView(for: index)
+                        }
+                    ){
+                    VStack(spacing : 0){
+                        HeaderView()
+                            Spacer()
+                            welcometextAnimated
+                            introText.transition(.move(edge: .bottom))
+                            Spacer()
+                        }
+                    }
                 FooterView()
             }
         }
@@ -77,6 +90,13 @@ struct TitleScreenView: View {
             self.cementTitleInPlace = true
         }
         
+    }
+    
+    func subView(for index : Int) -> AnyView {
+        switch index {
+          case 1: return AnyView(Text("View 1").frame(maxWidth: .infinity, maxHeight: .infinity))
+          default: return AnyView(Text("error").frame(maxWidth: .infinity, maxHeight: .infinity))
+        }
     }
 }
 

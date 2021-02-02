@@ -17,6 +17,7 @@
 		AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */; };
 		AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552925B6545D00DB52AB /* HeaderView.swift */; };
 		AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552E25B6558500DB52AB /* FooterView.swift */; };
+		ABD59FAC25CA0D9200959D01 /* StackNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD59FAB25CA0D9200959D01 /* StackNavigationView.swift */; };
 		ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */; };
 		ABE5806225B60BF000C511A2 /* TitleScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5806125B60BF000C511A2 /* TitleScreenView.swift */; };
 		ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806325B60BF100C511A2 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenModifiers.swift; sourceTree = "<group>"; };
 		AB7F552925B6545D00DB52AB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AB7F552E25B6558500DB52AB /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		ABD59FAB25CA0D9200959D01 /* StackNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNavigationView.swift; sourceTree = "<group>"; };
 		ABE5805C25B60BF000C511A2 /* Crime Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverApp.swift; sourceTree = "<group>"; };
 		ABE5806125B60BF000C511A2 /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
@@ -118,9 +120,10 @@
 			path = TitleScreen;
 			sourceTree = "<group>";
 		};
-		AB7F553925B6577200DB52AB /* Extensions_UI */ = {
+		ABD59FAA25CA0D7700959D01 /* Extensions_UI */ = {
 			isa = PBXGroup;
 			children = (
+				ABD59FAB25CA0D9200959D01 /* StackNavigationView.swift */,
 			);
 			path = Extensions_UI;
 			sourceTree = "<group>";
@@ -148,7 +151,7 @@
 		ABE5805E25B60BF000C511A2 /* Crime Solver */ = {
 			isa = PBXGroup;
 			children = (
-				AB7F553925B6577200DB52AB /* Extensions_UI */,
+				ABD59FAA25CA0D7700959D01 /* Extensions_UI */,
 				AB7F552025B64D7500DB52AB /* TitleScreen */,
 				AB7F551325B64C4D00DB52AB /* Fonts */,
 				ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */,
@@ -249,7 +252,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					ABE5805B25B60BF000C511A2 = {
 						CreatedOnToolsVersion = 12.3;
@@ -325,6 +328,7 @@
 				ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */,
 				AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */,
 				AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */,
+				ABD59FAC25CA0D9200959D01 /* StackNavigationView.swift in Sources */,
 				AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */,
 				AB1F44E125B72D1600AC0630 /* SecretCodeClass.swift in Sources */,
 			);
@@ -483,6 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Crime Solver/Crime_Solver.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Crime Solver/Preview Content\"";
@@ -507,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Crime Solver/Crime_Solver.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Crime Solver/Preview Content\"";

@@ -17,7 +17,13 @@ struct HeaderView: View {
         }.padding(.all)
     }
 }
-
+struct HeaderImage : View {
+    var body : some View {
+        Group{
+            Image("SpyIconHead").resizable().scaledToFit()
+        }.frame(height : 50, alignment: .center)
+    }
+}
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView()
