@@ -10,9 +10,7 @@ import SwiftUI
 struct HeaderView: View {
     var body: some View {
         HStack {
-            Group{
-                Image("SpyIconHead").resizable().scaledToFit()
-            }.frame(height : 50, alignment: .center)
+            HeaderImage()
             Spacer()
         }.padding(.all)
     }

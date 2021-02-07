@@ -17,7 +17,11 @@
 		AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */; };
 		AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552925B6545D00DB52AB /* HeaderView.swift */; };
 		AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552E25B6558500DB52AB /* FooterView.swift */; };
-		ABD59FAC25CA0D9200959D01 /* StackNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD59FAB25CA0D9200959D01 /* StackNavigationView.swift */; };
+		AB85BF8025D06F22003199FB /* ListOfIdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BF7F25D06F22003199FB /* ListOfIdeasView.swift */; };
+		AB85BF8825D06F31003199FB /* NewIdeaFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BF8725D06F31003199FB /* NewIdeaFormView.swift */; };
+		AB85BF9025D09312003199FB /* IdeaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BF8F25D09312003199FB /* IdeaDetailView.swift */; };
+		AB85BF9925D0932F003199FB /* IdeaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BF9825D0932F003199FB /* IdeaModel.swift */; };
+		AB85BFA125D096E2003199FB /* IdeasFormModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BFA025D096E2003199FB /* IdeasFormModifiers.swift */; };
 		ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */; };
 		ABE5806225B60BF000C511A2 /* TitleScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5806125B60BF000C511A2 /* TitleScreenView.swift */; };
 		ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806325B60BF100C511A2 /* Assets.xcassets */; };
@@ -54,7 +58,11 @@
 		AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenModifiers.swift; sourceTree = "<group>"; };
 		AB7F552925B6545D00DB52AB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AB7F552E25B6558500DB52AB /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
-		ABD59FAB25CA0D9200959D01 /* StackNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNavigationView.swift; sourceTree = "<group>"; };
+		AB85BF7F25D06F22003199FB /* ListOfIdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfIdeasView.swift; sourceTree = "<group>"; };
+		AB85BF8725D06F31003199FB /* NewIdeaFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIdeaFormView.swift; sourceTree = "<group>"; };
+		AB85BF8F25D09312003199FB /* IdeaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailView.swift; sourceTree = "<group>"; };
+		AB85BF9825D0932F003199FB /* IdeaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaModel.swift; sourceTree = "<group>"; };
+		AB85BFA025D096E2003199FB /* IdeasFormModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasFormModifiers.swift; sourceTree = "<group>"; };
 		ABE5805C25B60BF000C511A2 /* Crime Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverApp.swift; sourceTree = "<group>"; };
 		ABE5806125B60BF000C511A2 /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
@@ -120,12 +128,22 @@
 			path = TitleScreen;
 			sourceTree = "<group>";
 		};
-		ABD59FAA25CA0D7700959D01 /* Extensions_UI */ = {
+		AB85BF7E25D06EF2003199FB /* IdeasListGroup */ = {
 			isa = PBXGroup;
 			children = (
-				ABD59FAB25CA0D9200959D01 /* StackNavigationView.swift */,
+				AB85BF7F25D06F22003199FB /* ListOfIdeasView.swift */,
+				AB85BF8725D06F31003199FB /* NewIdeaFormView.swift */,
+				AB85BFA025D096E2003199FB /* IdeasFormModifiers.swift */,
 			);
-			path = Extensions_UI;
+			path = IdeasListGroup;
+			sourceTree = "<group>";
+		};
+		AB85BF9725D0931D003199FB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB85BF9825D0932F003199FB /* IdeaModel.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		ABE5805325B60BF000C511A2 = {
@@ -151,7 +169,9 @@
 		ABE5805E25B60BF000C511A2 /* Crime Solver */ = {
 			isa = PBXGroup;
 			children = (
-				ABD59FAA25CA0D7700959D01 /* Extensions_UI */,
+				AB85BF9725D0931D003199FB /* Classes */,
+				AB85BF8F25D09312003199FB /* IdeaDetailView.swift */,
+				AB85BF7E25D06EF2003199FB /* IdeasListGroup */,
 				AB7F552025B64D7500DB52AB /* TitleScreen */,
 				AB7F551325B64C4D00DB52AB /* Fonts */,
 				ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */,
@@ -326,11 +346,15 @@
 			files = (
 				ABE5806225B60BF000C511A2 /* TitleScreenView.swift in Sources */,
 				ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */,
+				AB85BF8025D06F22003199FB /* ListOfIdeasView.swift in Sources */,
+				AB85BFA125D096E2003199FB /* IdeasFormModifiers.swift in Sources */,
 				AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */,
+				AB85BF9925D0932F003199FB /* IdeaModel.swift in Sources */,
 				AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */,
-				ABD59FAC25CA0D9200959D01 /* StackNavigationView.swift in Sources */,
 				AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */,
 				AB1F44E125B72D1600AC0630 /* SecretCodeClass.swift in Sources */,
+				AB85BF8825D06F31003199FB /* NewIdeaFormView.swift in Sources */,
+				AB85BF9025D09312003199FB /* IdeaDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

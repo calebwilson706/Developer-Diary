@@ -13,7 +13,6 @@ struct TitleScreenView: View {
     @State private var isSecretText = false
     @State private var cementTitleInPlace = false
     
-    @State private var currSubViewIndex = 0
     @State var nextViewShows = false
     
     @ObservedObject var navText = SecretText(plain: "YES")
@@ -37,7 +36,6 @@ struct TitleScreenView: View {
                     .modifier(IntroText())
                 Group{
                     Button(action: {
-                        self.currSubViewIndex = 1
                         self.nextViewShows.toggle()
                     }){
                         SecretTextView(isSecret: $isSecretText, theSetOfStrings: navText).modifier(NavLinkText())
@@ -52,25 +50,17 @@ struct TitleScreenView: View {
     }
     var body: some View {
         ZStack {
-            Color.black
             VStack {
-                
-                StackNavigationView (
-                        currentSubviewIndex : self.$currSubViewIndex,
-                        showingSubview : self.$nextViewShows,
-                        subviewByIndex: { index in
-                            subView(for: index)
-                        }
-                    ){
-                    VStack(spacing : 0){
-                        HeaderView()
-                            Spacer()
-                            welcometextAnimated
-                            introText.transition(.move(edge: .bottom))
-                            Spacer()
-                        }
-                    }
-                FooterView()
+                if !self.nextViewShows {
+                    HeaderView()
+                    Spacer()
+                    welcometextAnimated
+                    introText.transition(.move(edge: .bottom))
+                    Spacer()
+                    FooterView()
+                } else {
+                    ListOfIdeasView().edgesIgnoringSafeArea(.all)
+                }
             }
         }
     }
@@ -92,12 +82,6 @@ struct TitleScreenView: View {
         
     }
     
-    func subView(for index : Int) -> AnyView {
-        switch index {
-          case 1: return AnyView(Text("View 1").frame(maxWidth: .infinity, maxHeight: .infinity))
-          default: return AnyView(Text("error").frame(maxWidth: .infinity, maxHeight: .infinity))
-        }
-    }
 }
 
 struct TitleScreenView_Previews: PreviewProvider {
