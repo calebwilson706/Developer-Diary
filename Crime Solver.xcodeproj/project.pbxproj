@@ -29,6 +29,7 @@
 		ABE5806725B60BF100C511A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806625B60BF100C511A2 /* Preview Assets.xcassets */; };
 		ABE5807325B60BF100C511A2 /* Crime_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5807225B60BF100C511A2 /* Crime_SolverTests.swift */; };
 		ABE5807E25B60BF100C511A2 /* Crime_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5807D25B60BF100C511A2 /* Crime_SolverUITests.swift */; };
+		ABEBCF1925D168CB00CB98F9 /* DetailViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEBCF1825D168CB00CB98F9 /* DetailViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		ABE5807925B60BF100C511A2 /* Crime SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crime SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5807D25B60BF100C511A2 /* Crime_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverUITests.swift; sourceTree = "<group>"; };
 		ABE5807F25B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABEBCF1825D168CB00CB98F9 /* DetailViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +174,8 @@
 		ABE5805E25B60BF000C511A2 /* Crime Solver */ = {
 			isa = PBXGroup;
 			children = (
+				ABEBCF1725D168AB00CB98F9 /* IdeaDetailFolder */,
 				AB85BF9725D0931D003199FB /* Classes */,
-				AB85BF8F25D09312003199FB /* IdeaDetailView.swift */,
 				AB85BF7E25D06EF2003199FB /* IdeasListGroup */,
 				AB7F552025B64D7500DB52AB /* TitleScreen */,
 				AB7F551325B64C4D00DB52AB /* Fonts */,
@@ -210,6 +212,15 @@
 				ABE5807F25B60BF100C511A2 /* Info.plist */,
 			);
 			path = "Crime SolverUITests";
+			sourceTree = "<group>";
+		};
+		ABEBCF1725D168AB00CB98F9 /* IdeaDetailFolder */ = {
+			isa = PBXGroup;
+			children = (
+				AB85BF8F25D09312003199FB /* IdeaDetailView.swift */,
+				ABEBCF1825D168CB00CB98F9 /* DetailViewModifiers.swift */,
+			);
+			path = IdeaDetailFolder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */,
 				AB85BF9925D0932F003199FB /* IdeaModel.swift in Sources */,
 				AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */,
+				ABEBCF1925D168CB00CB98F9 /* DetailViewModifiers.swift in Sources */,
 				AB7F552A25B6545D00DB52AB /* HeaderView.swift in Sources */,
 				AB1F44E125B72D1600AC0630 /* SecretCodeClass.swift in Sources */,
 				AB85BF8825D06F31003199FB /* NewIdeaFormView.swift in Sources */,

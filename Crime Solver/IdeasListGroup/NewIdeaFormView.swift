@@ -15,19 +15,25 @@ struct NewIdeaFormView : View {
     
     @ObservedObject var myKeywordsLists = KeyWordList()
     
-    @State private var descriptionTemp = "..."
-    @State private var titleTemp = ""
-    @State private var listOfTempFeatures = [String]()
-    @State private var listOfTempTags = [String]()
+    @State var descriptionTemp = "..."
+    @State var titleTemp = ""
+    @State var listOfTempFeatures = [String]()
+    @State var listOfTempTags = [String]()
     
     @State private var tempNewFeatureInField = ""
     @State private var featureHoveringOver = -1
     @State private var tempNewTagInField = ""
     @State private var tagHoveringOver = -1
     
+    @State private var showErrorMsg = false
+    
+    @State var isNewAssignment = true
+    @State var theUUIDToFind : UUID? = nil
+    
+    @State private var newTags = [String]()
     var headerCancelbar : some View {
         HStack{
-            Text("New Assignment").modifier(HeaderFormFont())
+            Text(isNewAssignment ? "New Assignment" : titleTemp).modifier(HeaderFormFont())
             Spacer()
             Button(action: {
                 withAnimation {
@@ -44,14 +50,18 @@ struct NewIdeaFormView : View {
             TextEditor(text: $descriptionTemp)
                 .font(.body)
                 
-        }.padding()
+        }.padding(.horizontal)
             
     }
     var titleTextField : some View {
         VStack(spacing : 5){
             FormTitlesViews(str: "Title:")
             TextField("Title Here", text: $titleTemp)
-                .font(.title2)
+                .font(.title2).onChange(of: titleTemp, perform: { _ in
+                    titleTemp = (titleTemp.first?.uppercased() ?? "") + titleTemp.dropFirst()
+                })
+                
+                
         }.padding()
     }
     var featuresList : some View {
@@ -70,20 +80,20 @@ struct NewIdeaFormView : View {
                 }
                 newFeatureTextField
             }.listStyle(PlainListStyle())
-        }.padding()
+        }.padding(.horizontal)
     }
     var newFeatureTextField : some View {
         HStack{
             Button(action: {
-                if self.tempNewFeatureInField != "" {
-                    self.listOfTempFeatures.append(self.tempNewFeatureInField)
-                    self.tempNewFeatureInField = ""
-                }
+                handleNewFeatureSequence()
             }){
                 Image(systemName: "plus.circle.fill").imageScale(.medium)
             }.buttonStyle(CloseButtonStyle())
             
-            TextField("New Feature...", text: $tempNewFeatureInField)
+            TextField("New Feature...", text: $tempNewFeatureInField,onCommit : {
+                handleNewFeatureSequence()
+            })
+            .modifier(ManualTextFieldAnimationCursor())
         }
     }
     var tagsSection : some View {
@@ -104,14 +114,15 @@ struct NewIdeaFormView : View {
                             self.tagHoveringOver = inside ? index : -1
                         }
                         .onTapGesture {
+                            self.newTags = self.newTags.filter {$0 != key}
                             self.listOfTempTags.remove(at: index)
                         }
                         
                 }
                 newTagTextField
+                suggestedTagsAreas
             }.listStyle(PlainListStyle())
-            suggestedTagsAreas
-        }.padding()
+        }.padding(.horizontal)
     }
     
     var newTagTextField : some View {
@@ -122,42 +133,103 @@ struct NewIdeaFormView : View {
                 Image(systemName: "plus.circle.fill").imageScale(.medium)
             }.buttonStyle(CloseButtonStyle())
             
-            TextField("New Tag...",text : $tempNewTagInField)
+            TextField("New Tag...",text : $tempNewTagInField,onCommit : {
+                handleTagTextFieldExit()
+            })
+            .modifier(ManualTextFieldAnimationCursor())
         }
     }
     
     var suggestedTagsAreas : some View {
         HStack(spacing : 0){
-            ForEach(self.myKeywordsLists.keywords, id: \.word){ key in
+            ForEach(Array(self.myKeywordsLists.keywords.enumerated()), id: \.offset){ index, key in
                 if (key.word.contains(self.tempNewTagInField.lowercased())){
-                    Text(key.word + ",").onTapGesture {
-                        self.tempNewTagInField = key.word
-                        handleNewTagSequence()
-                    }.modifier(cursorForButtonStyleMod())
+                    Text(key.word + ",").padding()
+                        .onTapGesture {
+                            self.tempNewTagInField = key.word
+                            handleNewTagSequence()
+                        }.modifier(cursorForButtonStyleMod())
+                        .background(
+                            (self.myKeywordsLists.keywords.firstIndex {$0.word.contains(self.tempNewTagInField.lowercased())} == index)
+                                ? Color.gray.cornerRadius(5) : Color.clear.cornerRadius(5)
+                        )
                 }
+                
             }
             Spacer()
         }
     }
+    
+    var saveButton : some View {
+        HStack {
+            Spacer()
+            Button(action:{
+                if (titleTemp != "" && descriptionTemp != ""){
+                    handleSavePressed()
+                } else {
+                    self.showErrorMsg = true
+                }
+            }){
+                Text("\(self.isNewAssignment ? "create" : "edit") assignment").padding(.all,6)
+            }.buttonStyle(SaveButtonStyle())
+            Spacer()
+        }
+    }
     var body : some View {
-        VStack(spacing : 5){
-            headerCancelbar
+        VStack(spacing : 0){
             Form {
-                titleTextField
-                descriptiontextEditor
-                featuresList
+                headerCancelbar
+                if isNewAssignment {
+                    titleTextField
+                }
+                descriptiontextEditor.frame(maxHeight: 150)
+                featuresList.frame(maxHeight : 2000)
                 tagsSection
-                //save button here
-            }.padding(.bottom)
+                saveButton
+            }
+            //save button here
+            Spacer()
         }.frame(minWidth: 500,minHeight: 500)
+        .alert(isPresented: $showErrorMsg){
+            Alert(title: Text("Invalid Input!"), message: Text("You either didnt fill in the description or title."), dismissButton: .default(Text("Dismiss")))
+        }
     }
     
     func handleNewTagSequence() {
         if self.tempNewTagInField != "" {
             if !self.listOfTempTags.contains(tempNewTagInField.lowercased()) {
                 self.listOfTempTags.append(self.tempNewTagInField.lowercased().replacingOccurrences(of: " ", with: "-"))
+                self.newTags.append(self.tempNewTagInField.lowercased().replacingOccurrences(of: " ", with: "-"))
             }
             self.tempNewTagInField = ""
+        }
+    }
+    
+    func handleTagTextFieldExit() {
+        self.tempNewTagInField = (self.myKeywordsLists.keywords.first {$0.word.contains(self.tempNewTagInField.lowercased())}?.word) ?? self.tempNewTagInField
+        handleNewTagSequence()
+    }
+    func handleNewFeatureSequence() {
+        if self.tempNewFeatureInField != "" {
+            self.listOfTempFeatures.append(self.tempNewFeatureInField)
+            self.tempNewFeatureInField = ""
+        }
+    }
+    func handleSavePressed() {
+        let newAssignment = Assignment(title: self.titleTemp, description: self.descriptionTemp, features: self.listOfTempFeatures, tags: self.listOfTempTags)
+        updateTheTagsInStorage()
+        
+        if isNewAssignment {
+            self.listOfCurrentAssignments.assignments.append(newAssignment)
+        } else {
+            let index = self.listOfCurrentAssignments.assignments.firstIndex(where: {$0.id == theUUIDToFind})
+            (index != nil) ? self.listOfCurrentAssignments.assignments[index!] = newAssignment : print("error")
+        }
+        self.showThisForm = false
+    }
+    func updateTheTagsInStorage() {
+        for item in self.newTags {
+            self.myKeywordsLists.addKeyWord(word: item)
         }
     }
 }

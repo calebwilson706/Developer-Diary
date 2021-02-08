@@ -11,14 +11,22 @@ import SwiftUI
 struct ListOfIdeasView : View {
     @ObservedObject var listOfAssignments = ListOfAssignments()
     @State var showForm = false
+    
+    @State var selectedID : UUID? = nil
     var body: some View {
         ZStack{
             NavigationView {
                  VStack {
                     List {
-                        ForEach(0..<100){ num in
-                            NavigationLink(destination: Text("Testing This : \(num)")){
-                                Text("next view")
+                        ForEach(listOfAssignments.assignments, id: \.id){ idea in
+                            NavigationLink(destination:
+                                    IdeaDetailView(idea : idea).environmentObject(self.listOfAssignments)
+                            ){
+                                HStack{
+                                    Text(idea.title)
+                                        .font(.custom("Montserrat-Regular", size: 18))
+                                    Spacer()
+                                }
                             }
                         }
                     }.padding(.all)

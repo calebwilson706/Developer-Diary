@@ -64,7 +64,8 @@ class KeyWordList : ObservableObject {
         } else {
             self.keywords.append(KeywordRelations(word: word.lowercased(), usage: 1))
             do {
-                let str = word.lowercased() + ":0\n"
+                let currentContents = try String(contentsOf: path)
+                let str = currentContents + (word.lowercased() + ":1\n")
                 try str.write(to: path, atomically: true, encoding: .utf8)
             } catch {
                 print(error)

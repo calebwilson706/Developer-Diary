@@ -11,12 +11,17 @@ import SwiftUI
 struct SaveButtonStyle : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .background((configuration.isPressed ? Color("LimeGreenWelcome") : Color.gray).cornerRadius(10))
+            .foregroundColor(configuration.isPressed ? Color.gray : Color.white)
+            .font(.custom("SourceCodePro-SemiBold", size: 18))
+            .modifier(cursorForButtonStyleMod())
     }
 }
 
 struct CloseButtonStyle : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .font(.custom("SourceCodePro-SemiBold", size: 13))
             .background(EmptyView())
             .foregroundColor(configuration.isPressed ? Color.primary : Color.secondary)
             .modifier(cursorForButtonStyleMod())
@@ -50,3 +55,18 @@ struct MiniHeaderFormFont : ViewModifier {
             .foregroundColor(Color("LimeGreenWelcome"))
     }
 }
+
+struct ManualTextFieldAnimationCursor : ViewModifier {
+    func body(content: Content) -> some View {
+        return content.onHover { inside in
+            if inside {
+                NSCursor.iBeam.push()
+            } else {
+                NSCursor.pop()
+            }
+        }
+    }
+}
+
+
+
