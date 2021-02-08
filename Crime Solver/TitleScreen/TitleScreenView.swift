@@ -18,6 +18,8 @@ struct TitleScreenView: View {
     @ObservedObject var navText = SecretText(plain: "YES")
     @ObservedObject var assignmentText = SecretText(plain: "Are You Ready For Your Assignement?")
     @ObservedObject var welcomeTextEncoded = SecretText(plain: "Welcome Agent...")
+    
+    @ObservedObject var test = KeyWordList()
     var welcometextAnimated : some View {
         Group {
             if !cementTitleInPlace {
@@ -81,6 +83,8 @@ struct TitleScreenView: View {
         }
         
     }
+    
+    
     
 }
 

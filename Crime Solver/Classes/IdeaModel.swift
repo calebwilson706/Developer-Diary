@@ -16,11 +16,11 @@ struct Feature {
     private var feature : String
 }
 class Assignment : ObservableObject {
-    private var title : String
-    private var description : String
-    private var features : [Feature]
-    private var tags : [String]
-    private var dateOfCreation : Date
+    @Published private var title : String
+    @Published private var description : String
+    @Published private var features : [Feature]
+    @Published private var tags : [String]
+    @Published private var dateOfCreation : Date
     
     init(title : String,description : String, features : [Feature], tags : [String]) {
         self.title = title

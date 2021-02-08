@@ -22,6 +22,7 @@
 		AB85BF9025D09312003199FB /* IdeaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BF8F25D09312003199FB /* IdeaDetailView.swift */; };
 		AB85BF9925D0932F003199FB /* IdeaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BF9825D0932F003199FB /* IdeaModel.swift */; };
 		AB85BFA125D096E2003199FB /* IdeasFormModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BFA025D096E2003199FB /* IdeasFormModifiers.swift */; };
+		AB85BFAE25D0AC56003199FB /* KeywordsParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85BFAD25D0AC56003199FB /* KeywordsParsing.swift */; };
 		ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */; };
 		ABE5806225B60BF000C511A2 /* TitleScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE5806125B60BF000C511A2 /* TitleScreenView.swift */; };
 		ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE5806325B60BF100C511A2 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		AB85BF8F25D09312003199FB /* IdeaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailView.swift; sourceTree = "<group>"; };
 		AB85BF9825D0932F003199FB /* IdeaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaModel.swift; sourceTree = "<group>"; };
 		AB85BFA025D096E2003199FB /* IdeasFormModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasFormModifiers.swift; sourceTree = "<group>"; };
+		AB85BFAD25D0AC56003199FB /* KeywordsParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsParsing.swift; sourceTree = "<group>"; };
 		ABE5805C25B60BF000C511A2 /* Crime Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverApp.swift; sourceTree = "<group>"; };
 		ABE5806125B60BF000C511A2 /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				AB85BF9825D0932F003199FB /* IdeaModel.swift */,
+				AB85BFAD25D0AC56003199FB /* KeywordsParsing.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				ABE5806025B60BF000C511A2 /* Crime_SolverApp.swift in Sources */,
 				AB85BF8025D06F22003199FB /* ListOfIdeasView.swift in Sources */,
 				AB85BFA125D096E2003199FB /* IdeasFormModifiers.swift in Sources */,
+				AB85BFAE25D0AC56003199FB /* KeywordsParsing.swift in Sources */,
 				AB7F552F25B6558500DB52AB /* FooterView.swift in Sources */,
 				AB85BF9925D0932F003199FB /* IdeaModel.swift in Sources */,
 				AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */,
