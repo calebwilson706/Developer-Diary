@@ -12,6 +12,8 @@ struct IdeaDetailView : View {
     @ObservedObject var idea : Assignment
     @EnvironmentObject var localListOfAssignemntsForediting : ListOfAssignments
     @State var isEditMode = false
+    
+
     var descriptionStack : some View {
         VStack(alignment : .center) {
             DetailsTitlesViews(str : "Description:")

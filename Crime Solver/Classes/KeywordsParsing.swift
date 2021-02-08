@@ -25,7 +25,8 @@ class KeyWordList : ObservableObject {
             let parsed = item.split(separator: ":")
             keywords.append(KeywordRelations(word: String(parsed[0]), usage: Int(parsed[1]) ?? 0))
         }
-    
+        
+        keywords.sort {$0.usage > $1.usage}
     }
     
     func getDocumentsDirectory() -> URL {

@@ -231,6 +231,7 @@ struct NewIdeaFormView : View {
         for item in self.newTags {
             self.myKeywordsLists.addKeyWord(word: item)
         }
+        self.myKeywordsLists.keywords.sort {$0.usage > $1.usage}
     }
 }
 
