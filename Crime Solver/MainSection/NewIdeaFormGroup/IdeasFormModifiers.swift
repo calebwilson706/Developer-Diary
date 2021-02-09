@@ -69,4 +69,14 @@ struct ManualTextFieldAnimationCursor : ViewModifier {
 }
 
 
-
+struct ExitButtonEditModeStyle : ButtonStyle {
+    var isEditModeOn : Bool
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundColor(isEditModeOn ? (configuration.isPressed ? Color.white : Color("LimeGreenWelcome")) : (configuration.isPressed ? Color.primary : Color.secondary))
+            .background(Color.clear)
+            .font(.custom("SourceCodePro-SemiBold", size: (isEditModeOn ? 20 : 15)))
+            .modifier(cursorForButtonStyleMod())
+    
+    }
+}

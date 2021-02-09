@@ -100,13 +100,6 @@ struct NewIdeaFormView : View {
         VStack(spacing : 5){
             FormTitlesViews(str: "Tags:")
             List{
-//                ForEach(Array(Self.listOfTempTags.enumerated()), id : \.self){ tag in
-//                    Text("#" + tag).onHover { inside in
-//                        if inside {
-//                            self.hoveringOver == self.listOfTempTags.lastIndex(of: tag)
-//                        }
-//                    }
-//                }
                 ForEach(Array(self.listOfTempTags.enumerated()), id : \.offset){ index, key in
                     Text("#" + key)
                         .strikethrough(tagHoveringOver == index)
@@ -143,14 +136,14 @@ struct NewIdeaFormView : View {
     var suggestedTagsAreas : some View {
         HStack(spacing : 0){
             ForEach(Array(self.myKeywordsLists.keywords.enumerated()), id: \.offset){ index, key in
-                if (key.word.contains(self.tempNewTagInField.lowercased())){
+                if (key.word.contains(tagValidation(str: self.tempNewTagInField))){
                     Text(key.word + ",").padding()
                         .onTapGesture {
                             self.tempNewTagInField = key.word
                             handleNewTagSequence()
                         }.modifier(cursorForButtonStyleMod())
                         .background(
-                            (self.myKeywordsLists.keywords.firstIndex {$0.word.contains(self.tempNewTagInField.lowercased())} == index)
+                            (self.myKeywordsLists.keywords.firstIndex {$0.word.contains(tagValidatedContainerForTextFieldValue())} == index)
                                 ? Color.gray.cornerRadius(5) : Color.clear.cornerRadius(5)
                         )
                 }
@@ -198,15 +191,15 @@ struct NewIdeaFormView : View {
     func handleNewTagSequence() {
         if self.tempNewTagInField != "" {
             if !self.listOfTempTags.contains(tempNewTagInField.lowercased()) {
-                self.listOfTempTags.append(self.tempNewTagInField.lowercased().replacingOccurrences(of: " ", with: "-"))
-                self.newTags.append(self.tempNewTagInField.lowercased().replacingOccurrences(of: " ", with: "-"))
+                self.listOfTempTags.append(tagValidatedContainerForTextFieldValue())
+                self.newTags.append(tagValidatedContainerForTextFieldValue())
             }
             self.tempNewTagInField = ""
         }
     }
     
     func handleTagTextFieldExit() {
-        self.tempNewTagInField = (self.myKeywordsLists.keywords.first {$0.word.contains(self.tempNewTagInField.lowercased())}?.word) ?? self.tempNewTagInField
+        self.tempNewTagInField = (self.myKeywordsLists.keywords.first {$0.word.contains(tagValidatedContainerForTextFieldValue())}?.word) ?? self.tempNewTagInField
         handleNewTagSequence()
     }
     func handleNewFeatureSequence() {
@@ -233,6 +226,9 @@ struct NewIdeaFormView : View {
         }
         self.myKeywordsLists.keywords.sort {$0.usage > $1.usage}
     }
+    func tagValidatedContainerForTextFieldValue() -> String {
+        return tagValidation(str: self.tempNewTagInField)
+    }
 }
 
 
@@ -247,4 +243,9 @@ struct FormTitlesViews : View {
 }
 
 
-
+func tagValidation(str : String) -> String {
+    return str
+        .lowercased()
+        .replacingOccurrences(of: " ", with: "-")
+        .filter {$0 != ","}
+}
