@@ -7,13 +7,13 @@
 
 import Foundation
 import SwiftUI
+import PDFKit
 
 struct IdeaDetailView : View {
     @ObservedObject var idea : Assignment
     @EnvironmentObject var localListOfAssignemntsForediting : ListOfAssignments
     @State var isEditMode = false
     
-
     var descriptionStack : some View {
         VStack(alignment : .center) {
             DetailsTitlesViews(str : "Description:")
@@ -24,17 +24,20 @@ struct IdeaDetailView : View {
             }
         }
     }
+    
     var titleBar : some View {
-        HStack{
-            Spacer()
-            Text(idea.title).modifier(TitleDetailText())
-            Spacer()
-            Button(action: {
-                self.isEditMode = true
-            }){
-                Text("edit")
-            }.buttonStyle(CloseButtonStyle())
-        }.padding(.top)
+        ZStack {
+            HStack{
+                Spacer()
+                Text(idea.title).modifier(TitleDetailText())
+                Spacer()
+                Button(action: {
+                    self.isEditMode = true
+                }){
+                    Text("edit")
+                }.buttonStyle(CloseButtonStyle())
+            }.padding(.top)
+        }
     }
     
     var body : some View {

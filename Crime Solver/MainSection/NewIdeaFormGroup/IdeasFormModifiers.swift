@@ -21,17 +21,25 @@ struct SaveButtonStyle : ButtonStyle {
 struct CloseButtonStyle : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.custom("SourceCodePro-SemiBold", size: 13))
-            .background(EmptyView())
-            .foregroundColor(configuration.isPressed ? Color.primary : Color.secondary)
+            .buttonStyle(BaseForCloseButtonStyle())
             .modifier(cursorForButtonStyleMod())
     }
 }
 
+struct BaseForCloseButtonStyle : ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.custom("SourceCodePro-SemiBold", size: 13))
+            .background(EmptyView())
+            .foregroundColor(configuration.isPressed ? Color.primary : Color.secondary)
+    }
+}
+
 struct cursorForButtonStyleMod : ViewModifier {
+    var disableThisFeature = false
     func body(content: Content) -> some View {
         return content.onHover { inside in
-            if inside {
+            if inside && !disableThisFeature {
                 NSCursor.pointingHand.push()
             } else {
                 NSCursor.pop()

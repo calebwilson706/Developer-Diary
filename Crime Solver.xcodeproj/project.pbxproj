@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB07A42025D40485004DA3F3 /* SourceCodePro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551425B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf */; };
 		AB10AF5925B6F7DA00073BD6 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5625B6F7DA00073BD6 /* Montserrat-Bold.ttf */; };
 		AB10AF5A25B6F7DA00073BD6 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5725B6F7DA00073BD6 /* Montserrat-Regular.ttf */; };
 		AB10AF5B25B6F7DA00073BD6 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB10AF5825B6F7DA00073BD6 /* Montserrat-Italic.ttf */; };
 		AB1F44E125B72D1600AC0630 /* SecretCodeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1F44E025B72D1600AC0630 /* SecretCodeClass.swift */; };
 		AB36C64925D347F600AB80B7 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB36C64825D347F600AB80B7 /* UIExtensions.swift */; };
 		AB36C66125D34DFA00AB80B7 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB36C66025D34DFA00AB80B7 /* SearchBarView.swift */; };
-		AB7F551725B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551425B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf */; };
 		AB7F551825B64C5D00DB52AB /* SourceCodePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551525B64C5D00DB52AB /* SourceCodePro-Light.ttf */; };
 		AB7F551925B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB7F551625B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf */; };
 		AB7F552225B64D8C00DB52AB /* TitleScreenModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F552125B64D8C00DB52AB /* TitleScreenModifiers.swift */; };
@@ -365,13 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE5806725B60BF100C511A2 /* Preview Assets.xcassets in Resources */,
+				AB07A42025D40485004DA3F3 /* SourceCodePro-BoldItalic.ttf in Resources */,
 				AB7F551825B64C5D00DB52AB /* SourceCodePro-Light.ttf in Resources */,
 				AB10AF5A25B6F7DA00073BD6 /* Montserrat-Regular.ttf in Resources */,
 				AB10AF5B25B6F7DA00073BD6 /* Montserrat-Italic.ttf in Resources */,
 				AB10AF5925B6F7DA00073BD6 /* Montserrat-Bold.ttf in Resources */,
 				ABE5806425B60BF100C511A2 /* Assets.xcassets in Resources */,
 				AB7F551925B64C5D00DB52AB /* SourceCodePro-SemiBold.ttf in Resources */,
-				AB7F551725B64C5D00DB52AB /* SourceCodePro-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

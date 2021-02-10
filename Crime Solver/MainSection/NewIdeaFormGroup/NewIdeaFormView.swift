@@ -244,8 +244,15 @@ struct FormTitlesViews : View {
 
 
 func tagValidation(str : String) -> String {
-    return str
+    var temp = str
         .lowercased()
         .replacingOccurrences(of: " ", with: "-")
         .filter {$0 != ","}
+    if temp.first == "-" {
+        temp.removeFirst()
+    }
+    if temp.last == "-" {
+        temp.removeLast()
+    }
+    return temp
 }

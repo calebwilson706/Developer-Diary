@@ -18,8 +18,13 @@ import SwiftUI
 */
 
 struct SearchBarView : View {
+    //essentials
     @Binding var theSearchString : String
-    @State var showTextField = false
+    @State private var showTextField = false
+    let operationToBeCarriedOutAfterChanged : () -> Void
+    
+    //help
+    @Binding var showHelp : Bool
     
     var magnifyingGlassButton : some View {
         Button(action: {
@@ -30,13 +35,32 @@ struct SearchBarView : View {
             Image(systemName: "magnifyingglass")
         }.buttonStyle(CloseButtonStyle())
     }
+    
+    var helpButton : some View {
+        Button(action : {
+            self.showHelp.toggle()
+        }){
+            Image(systemName: "questionmark.circle.fill")
+        }.buttonStyle(BaseForCloseButtonStyle())
+        .modifier(cursorForButtonStyleMod(disableThisFeature: !showTextField))
+    }
+    var theTextField : some View {
+        TextField("Search For Tags...", text: $theSearchString).onChange(of: theSearchString, perform: { _ in
+            operationToBeCarriedOutAfterChanged()
+        })
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+    }
     var body : some View {
         HStack {
             magnifyingGlassButton
             
-            TextField("Search For Tags...", text: $theSearchString)
-                .opacity(showTextField ? 1.0 : 0.0)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            Group {
+                theTextField
+                helpButton
+            }.opacity(showTextField ? 1.0 : 0.0)
+             .disabled(!showTextField)
+            
+            
 
         }.padding(.horizontal).padding(.top)
     }
