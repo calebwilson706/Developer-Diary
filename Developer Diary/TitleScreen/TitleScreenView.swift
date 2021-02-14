@@ -74,7 +74,7 @@ struct TitleScreenView: View {
                 DispatchQueue.main.async {
                     myWelcometext += "\(char)"
                 }
-                Thread.sleep(forTimeInterval: 0.2)
+                Thread.sleep(forTimeInterval: 0.1)
             }
             withAnimation(.easeInOut(duration : 1.1)) {
                 self.showIntroText.toggle()

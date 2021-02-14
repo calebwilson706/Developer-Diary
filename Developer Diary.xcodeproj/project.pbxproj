@@ -70,17 +70,17 @@
 		AB85BF9825D0932F003199FB /* IdeaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaModel.swift; sourceTree = "<group>"; };
 		AB85BFA025D096E2003199FB /* IdeasFormModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasFormModifiers.swift; sourceTree = "<group>"; };
 		AB85BFAD25D0AC56003199FB /* KeywordsParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsParsing.swift; sourceTree = "<group>"; };
-		ABE5805C25B60BF000C511A2 /* Crime Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE5805C25B60BF000C511A2 /* Developer Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Developer Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverApp.swift; sourceTree = "<group>"; };
 		ABE5806125B60BF000C511A2 /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
 		ABE5806325B60BF100C511A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE5806625B60BF100C511A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ABE5806825B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABE5806925B60BF100C511A2 /* Crime_Solver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crime_Solver.entitlements; sourceTree = "<group>"; };
-		ABE5806E25B60BF100C511A2 /* Crime SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crime SolverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE5806825B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/calebjw/Desktop/Developer Diary/Developer Diary/Developer Diary/Info.plist"; sourceTree = "<absolute>"; };
+		ABE5806925B60BF100C511A2 /* Developer_Diary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Developer_Diary.entitlements; sourceTree = "<group>"; };
+		ABE5806E25B60BF100C511A2 /* Developer DiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Developer DiaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5807225B60BF100C511A2 /* Crime_SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverTests.swift; sourceTree = "<group>"; };
 		ABE5807425B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABE5807925B60BF100C511A2 /* Crime SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crime SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE5807925B60BF100C511A2 /* Developer DiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Developer DiaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE5807D25B60BF100C511A2 /* Crime_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime_SolverUITests.swift; sourceTree = "<group>"; };
 		ABE5807F25B60BF100C511A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABEBCF1825D168CB00CB98F9 /* DetailViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModifiers.swift; sourceTree = "<group>"; };
@@ -192,9 +192,9 @@
 		ABE5805325B60BF000C511A2 = {
 			isa = PBXGroup;
 			children = (
-				ABE5805E25B60BF000C511A2 /* Crime Solver */,
-				ABE5807125B60BF100C511A2 /* Crime SolverTests */,
-				ABE5807C25B60BF100C511A2 /* Crime SolverUITests */,
+				ABE5805E25B60BF000C511A2 /* Developer Diary */,
+				ABE5807125B60BF100C511A2 /* Developer DiaryTests */,
+				ABE5807C25B60BF100C511A2 /* Develper DiaryUITests */,
 				ABE5805D25B60BF000C511A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -202,14 +202,14 @@
 		ABE5805D25B60BF000C511A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABE5805C25B60BF000C511A2 /* Crime Solver.app */,
-				ABE5806E25B60BF100C511A2 /* Crime SolverTests.xctest */,
-				ABE5807925B60BF100C511A2 /* Crime SolverUITests.xctest */,
+				ABE5805C25B60BF000C511A2 /* Developer Diary.app */,
+				ABE5806E25B60BF100C511A2 /* Developer DiaryTests.xctest */,
+				ABE5807925B60BF100C511A2 /* Developer DiaryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ABE5805E25B60BF000C511A2 /* Crime Solver */ = {
+		ABE5805E25B60BF000C511A2 /* Developer Diary */ = {
 			isa = PBXGroup;
 			children = (
 				AB36C64D25D347FB00AB80B7 /* Utilities */,
@@ -220,10 +220,10 @@
 				ABE5805F25B60BF000C511A2 /* Crime_SolverApp.swift */,
 				ABE5806325B60BF100C511A2 /* Assets.xcassets */,
 				ABE5806825B60BF100C511A2 /* Info.plist */,
-				ABE5806925B60BF100C511A2 /* Crime_Solver.entitlements */,
+				ABE5806925B60BF100C511A2 /* Developer_Diary.entitlements */,
 				ABE5806525B60BF100C511A2 /* Preview Content */,
 			);
-			path = "Crime Solver";
+			path = "Developer Diary";
 			sourceTree = "<group>";
 		};
 		ABE5806525B60BF100C511A2 /* Preview Content */ = {
@@ -234,22 +234,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ABE5807125B60BF100C511A2 /* Crime SolverTests */ = {
+		ABE5807125B60BF100C511A2 /* Developer DiaryTests */ = {
 			isa = PBXGroup;
 			children = (
 				ABE5807225B60BF100C511A2 /* Crime_SolverTests.swift */,
 				ABE5807425B60BF100C511A2 /* Info.plist */,
 			);
-			path = "Crime SolverTests";
+			path = "Developer DiaryTests";
 			sourceTree = "<group>";
 		};
-		ABE5807C25B60BF100C511A2 /* Crime SolverUITests */ = {
+		ABE5807C25B60BF100C511A2 /* Develper DiaryUITests */ = {
 			isa = PBXGroup;
 			children = (
 				ABE5807D25B60BF100C511A2 /* Crime_SolverUITests.swift */,
 				ABE5807F25B60BF100C511A2 /* Info.plist */,
 			);
-			path = "Crime SolverUITests";
+			path = "Develper DiaryUITests";
 			sourceTree = "<group>";
 		};
 		ABEBCF1725D168AB00CB98F9 /* IdeaDetailFolder */ = {
@@ -264,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABE5805B25B60BF000C511A2 /* Crime Solver */ = {
+		ABE5805B25B60BF000C511A2 /* Developer Diary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABE5808225B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime Solver" */;
+			buildConfigurationList = ABE5808225B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Developer Diary" */;
 			buildPhases = (
 				ABE5805825B60BF000C511A2 /* Sources */,
 				ABE5805925B60BF000C511A2 /* Frameworks */,
@@ -276,14 +276,14 @@
 			);
 			dependencies = (
 			);
-			name = "Crime Solver";
+			name = "Developer Diary";
 			productName = "Crime Solver";
-			productReference = ABE5805C25B60BF000C511A2 /* Crime Solver.app */;
+			productReference = ABE5805C25B60BF000C511A2 /* Developer Diary.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ABE5806D25B60BF100C511A2 /* Crime SolverTests */ = {
+		ABE5806D25B60BF100C511A2 /* Developer DiaryTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABE5808525B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverTests" */;
+			buildConfigurationList = ABE5808525B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Developer DiaryTests" */;
 			buildPhases = (
 				ABE5806A25B60BF100C511A2 /* Sources */,
 				ABE5806B25B60BF100C511A2 /* Frameworks */,
@@ -294,14 +294,14 @@
 			dependencies = (
 				ABE5807025B60BF100C511A2 /* PBXTargetDependency */,
 			);
-			name = "Crime SolverTests";
+			name = "Developer DiaryTests";
 			productName = "Crime SolverTests";
-			productReference = ABE5806E25B60BF100C511A2 /* Crime SolverTests.xctest */;
+			productReference = ABE5806E25B60BF100C511A2 /* Developer DiaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ABE5807825B60BF100C511A2 /* Crime SolverUITests */ = {
+		ABE5807825B60BF100C511A2 /* Developer DiaryUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABE5808825B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverUITests" */;
+			buildConfigurationList = ABE5808825B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Developer DiaryUITests" */;
 			buildPhases = (
 				ABE5807525B60BF100C511A2 /* Sources */,
 				ABE5807625B60BF100C511A2 /* Frameworks */,
@@ -312,9 +312,9 @@
 			dependencies = (
 				ABE5807B25B60BF100C511A2 /* PBXTargetDependency */,
 			);
-			name = "Crime SolverUITests";
+			name = "Developer DiaryUITests";
 			productName = "Crime SolverUITests";
-			productReference = ABE5807925B60BF100C511A2 /* Crime SolverUITests.xctest */;
+			productReference = ABE5807925B60BF100C511A2 /* Developer DiaryUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +339,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ABE5805725B60BF000C511A2 /* Build configuration list for PBXProject "Crime Solver" */;
+			buildConfigurationList = ABE5805725B60BF000C511A2 /* Build configuration list for PBXProject "Developer Diary" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -352,9 +352,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABE5805B25B60BF000C511A2 /* Crime Solver */,
-				ABE5806D25B60BF100C511A2 /* Crime SolverTests */,
-				ABE5807825B60BF100C511A2 /* Crime SolverUITests */,
+				ABE5805B25B60BF000C511A2 /* Developer Diary */,
+				ABE5806D25B60BF100C511A2 /* Developer DiaryTests */,
+				ABE5807825B60BF100C511A2 /* Developer DiaryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -435,12 +435,12 @@
 /* Begin PBXTargetDependency section */
 		ABE5807025B60BF100C511A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ABE5805B25B60BF000C511A2 /* Crime Solver */;
+			target = ABE5805B25B60BF000C511A2 /* Developer Diary */;
 			targetProxy = ABE5806F25B60BF100C511A2 /* PBXContainerItemProxy */;
 		};
 		ABE5807B25B60BF100C511A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ABE5805B25B60BF000C511A2 /* Crime Solver */;
+			target = ABE5805B25B60BF000C511A2 /* Developer Diary */;
 			targetProxy = ABE5807A25B60BF100C511A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -566,21 +566,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Crime Solver/Crime_Solver.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Developer Diary/Developer_Diary.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Crime Solver/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Developer Diary/Preview Content\"";
 				DEVELOPMENT_TEAM = NBY2AG34M4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Crime Solver/Info.plist";
+				INFOPLIST_FILE = "Developer Diary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-Solver";
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Developer-Diary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -591,21 +591,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Crime Solver/Crime_Solver.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Developer Diary/Developer_Diary.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Crime Solver/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Developer Diary/Preview Content\"";
 				DEVELOPMENT_TEAM = NBY2AG34M4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Crime Solver/Info.plist";
+				INFOPLIST_FILE = "Developer Diary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-Solver";
+				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Developer-Diary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -629,7 +629,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-SolverTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crime Solver.app/Contents/MacOS/Crime Solver";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Developer Diary.app/Contents/MacOS/Developer Diary";
 			};
 			name = Debug;
 		};
@@ -651,7 +651,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cjw.Crime-SolverTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crime Solver.app/Contents/MacOS/Crime Solver";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Developer Diary.app/Contents/MacOS/Developer Diary";
 			};
 			name = Release;
 		};
@@ -698,7 +698,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABE5805725B60BF000C511A2 /* Build configuration list for PBXProject "Crime Solver" */ = {
+		ABE5805725B60BF000C511A2 /* Build configuration list for PBXProject "Developer Diary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABE5808025B60BF100C511A2 /* Debug */,
@@ -707,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABE5808225B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime Solver" */ = {
+		ABE5808225B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Developer Diary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABE5808325B60BF100C511A2 /* Debug */,
@@ -716,7 +716,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABE5808525B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverTests" */ = {
+		ABE5808525B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Developer DiaryTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABE5808625B60BF100C511A2 /* Debug */,
@@ -725,7 +725,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABE5808825B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Crime SolverUITests" */ = {
+		ABE5808825B60BF100C511A2 /* Build configuration list for PBXNativeTarget "Developer DiaryUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABE5808925B60BF100C511A2 /* Debug */,
