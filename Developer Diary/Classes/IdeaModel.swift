@@ -17,20 +17,24 @@ import Foundation
 //}
 class Assignment : ObservableObject,Codable {
     enum CodingKeys : CodingKey {
-        case title, description, features, tags, dateOfCreation, id
+        case title, description, features,completedFeatures, tags, dateOfCreation, id
     }
     
     @Published var title : String
     @Published var description : String
+    
     @Published var features : [String]
+    @Published var completedFeatures : [String]
+    
     @Published var tags : [String]
     @Published var dateOfCreation : Date
     @Published var id : UUID
     
-    init(title : String,description : String, features : [String], tags : [String]) {
+    init(title : String,description : String, features : [String], tags : [String],completedFeatures : [String]) {
         self.title = title
         self.description = description
         self.features = features
+        self.completedFeatures = completedFeatures
         self.tags = tags
         self.dateOfCreation = Date()
         self.id = UUID()
@@ -42,7 +46,10 @@ class Assignment : ObservableObject,Codable {
     func addTag(tag : String){
         self.tags.append(tag)
     }
-    
+    func moveFeatureToCompleted(feature : String){
+        self.completedFeatures.append(feature)
+        self.features.removeAll {$0 == feature}
+    }
     //Codable
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -53,6 +60,7 @@ class Assignment : ObservableObject,Codable {
         tags = try container.decode([String].self, forKey: .tags)
         dateOfCreation = try container.decode(Date.self, forKey: .dateOfCreation)
         id = try container.decode(UUID.self, forKey: .id)
+        completedFeatures = try container.decode([String].self, forKey: .completedFeatures)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -64,6 +72,7 @@ class Assignment : ObservableObject,Codable {
         try container.encode(tags,forKey: .tags)
         try container.encode(dateOfCreation,forKey: .dateOfCreation)
         try container.encode(id, forKey: .id)
+        try container.encode(completedFeatures, forKey: .completedFeatures)
     }
 }
 

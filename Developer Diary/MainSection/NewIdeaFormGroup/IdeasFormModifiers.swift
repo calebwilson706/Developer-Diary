@@ -9,10 +9,13 @@ import Foundation
 import SwiftUI
 
 struct SaveButtonStyle : ButtonStyle {
+    var background : Color
+    var foreground : Color
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .background((configuration.isPressed ? Color("LimeGreenWelcome") : Color.gray).cornerRadius(10))
-            .foregroundColor(configuration.isPressed ? Color.gray : Color.white)
+            .background((configuration.isPressed ? Color("LimeGreenWelcome") : background).cornerRadius(10))
+            .foregroundColor(configuration.isPressed ? Color.black : foreground)
             .font(.custom("SourceCodePro-SemiBold", size: 18))
             .modifier(cursorForButtonStyleMod())
     }
@@ -84,7 +87,8 @@ struct ExitButtonEditModeStyle : ButtonStyle {
             .foregroundColor(isEditModeOn ? (configuration.isPressed ? Color.white : Color("LimeGreenWelcome")) : (configuration.isPressed ? Color.primary : Color.secondary))
             .background(Color.clear)
             .font(.custom("SourceCodePro-SemiBold", size: (isEditModeOn ? 20 : 15)))
-            .modifier(cursorForButtonStyleMod())
-    
+            
     }
 }
+
+

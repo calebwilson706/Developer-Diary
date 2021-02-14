@@ -18,6 +18,7 @@ struct NewIdeaFormView : View {
     @State var descriptionTemp = "..."
     @State var titleTemp = ""
     @State var listOfTempFeatures = [String]()
+    @State var listOfTempCompFeatures = [String]()
     @State var listOfTempTags = [String]()
     
     @State private var tempNewFeatureInField = ""
@@ -31,6 +32,10 @@ struct NewIdeaFormView : View {
     @State var theUUIDToFind : UUID? = nil
     
     @State private var newTags = [String]()
+    
+    @State var saveButtonBackground = Color.gray
+    @State var savebuttonForeground = Color.black
+    
     var headerCancelbar : some View {
         HStack{
             Text(isNewAssignment ? "New Assignment" : titleTemp).modifier(HeaderFormFont())
@@ -64,38 +69,7 @@ struct NewIdeaFormView : View {
                 
         }.padding()
     }
-    var featuresList : some View {
-        VStack(spacing : 5){
-            FormTitlesViews(str: "Features:")
-            List {
-                ForEach(Array(self.listOfTempFeatures.enumerated()), id : \.offset){ index, feature in
-                    Text(feature)
-                        .strikethrough(featureHoveringOver == index)
-                        .onHover { inside in
-                            featureHoveringOver = inside ? index : -1
-                        }
-                        .onTapGesture {
-                            self.listOfTempFeatures.remove(at: index)
-                        }
-                }
-                newFeatureTextField
-            }.listStyle(PlainListStyle())
-        }.padding(.horizontal)
-    }
-    var newFeatureTextField : some View {
-        HStack{
-            Button(action: {
-                handleNewFeatureSequence()
-            }){
-                Image(systemName: "plus.circle.fill").imageScale(.medium)
-            }.buttonStyle(CloseButtonStyle())
-            
-            TextField("New Feature...", text: $tempNewFeatureInField,onCommit : {
-                handleNewFeatureSequence()
-            })
-            .modifier(ManualTextFieldAnimationCursor())
-        }
-    }
+    
     var tagsSection : some View {
         VStack(spacing : 5){
             FormTitlesViews(str: "Tags:")
@@ -112,9 +86,9 @@ struct NewIdeaFormView : View {
                         }
                         
                 }
-                newTagTextField
-                suggestedTagsAreas
             }.listStyle(PlainListStyle())
+            newTagTextField
+            suggestedTagsAreas
         }.padding(.horizontal)
     }
     
@@ -164,7 +138,13 @@ struct NewIdeaFormView : View {
                 }
             }){
                 Text("\(self.isNewAssignment ? "create" : "edit") assignment").padding(.all,6)
-            }.buttonStyle(SaveButtonStyle())
+            }.buttonStyle(SaveButtonStyle(background: self.saveButtonBackground, foreground: self.savebuttonForeground))
+             .onHover { inside in
+                self.saveButtonBackground  = inside ? Color.white : Color.gray
+                self.savebuttonForeground = inside ? Color.black : Color.white
+             }
+            
+            .padding(.bottom,6)
             Spacer()
         }
     }
@@ -176,8 +156,9 @@ struct NewIdeaFormView : View {
                     titleTextField
                 }
                 descriptiontextEditor.frame(maxHeight: 150)
-                featuresList.frame(maxHeight : 2000)
-                tagsSection
+                FeatureView(title: "Completed Features:", listOfTempFeatures: self.$listOfTempCompFeatures, isNewFeatureList: false, move: moveFeatureUp).padding(.bottom,5)
+                FeatureView(title: "New Features:", listOfTempFeatures: self.$listOfTempFeatures, isNewFeatureList: true,move : moveFeatureUp).padding(.bottom,5)
+                tagsSection.padding(.bottom,5)
                 saveButton
             }
             //save button here
@@ -202,14 +183,8 @@ struct NewIdeaFormView : View {
         self.tempNewTagInField = (self.myKeywordsLists.keywords.first {$0.word.contains(tagValidatedContainerForTextFieldValue())}?.word) ?? self.tempNewTagInField
         handleNewTagSequence()
     }
-    func handleNewFeatureSequence() {
-        if self.tempNewFeatureInField != "" {
-            self.listOfTempFeatures.append(self.tempNewFeatureInField)
-            self.tempNewFeatureInField = ""
-        }
-    }
     func handleSavePressed() {
-        let newAssignment = Assignment(title: self.titleTemp, description: self.descriptionTemp, features: self.listOfTempFeatures, tags: self.listOfTempTags)
+        let newAssignment = Assignment(title: self.titleTemp, description: self.descriptionTemp, features: self.listOfTempFeatures, tags: self.listOfTempTags, completedFeatures: self.listOfTempCompFeatures)
         updateTheTagsInStorage()
         
         if isNewAssignment {
@@ -228,6 +203,11 @@ struct NewIdeaFormView : View {
     }
     func tagValidatedContainerForTextFieldValue() -> String {
         return tagValidation(str: self.tempNewTagInField)
+    }
+    
+    func moveFeatureUp(index : Int){
+        let str = self.listOfTempFeatures.remove(at: index)
+        self.listOfTempCompFeatures.append(str)
     }
 }
 
@@ -256,3 +236,79 @@ func tagValidation(str : String) -> String {
     }
     return temp
 }
+
+
+struct FeatureView : View {
+    var title : String
+    
+    @Binding var listOfTempFeatures : [String]
+    @State var featureHoveringOver = -1
+    @State var tempNewFeatureInField = ""
+    @State var overButton = false
+    
+    var isNewFeatureList : Bool
+    let move : (Int) -> Void
+    
+    var newFeatureTextField : some View {
+        HStack{
+            Button(action: {
+                handleNewFeatureSequence()
+            }){
+                Image(systemName: "plus.circle.fill").imageScale(.medium)
+            }.buttonStyle(CloseButtonStyle())
+            
+            TextField("New Feature...", text: $tempNewFeatureInField,onCommit : {
+                handleNewFeatureSequence()
+            })
+            .modifier(ManualTextFieldAnimationCursor())
+        }
+    }
+    
+    var body : some View {
+        VStack(spacing: 4){
+            FormTitlesViews(str: title)
+            List {
+                ForEach(Array(listOfTempFeatures.enumerated()), id: \.offset){ index, feature in
+                    HStack(spacing: 0) {
+                        Text("-> ")
+                        Text(feature)
+                            .strikethrough((featureHoveringOver == index) && !overButton)
+                            .onTapGesture {
+                                if !overButton {
+                                    self.listOfTempFeatures.remove(at: index)
+                                }
+                            }
+                            .padding(.trailing,5)
+                        
+                        if isNewFeatureList {
+                            Button(action: {
+                                move(index)
+                            }){
+                                Image(systemName: (((self.featureHoveringOver == index) && overButton) ? "arrow.up.circle.fill" : "arrow.up.circle"))
+                            }.buttonStyle(BaseForCloseButtonStyle())
+                            .onHover { inside in
+                                self.overButton = inside
+                            }
+                        }
+                        Spacer()
+                    }.onHover { inside in
+                        featureHoveringOver = inside ? index : -1
+                    }
+                    
+                }
+            }
+            newFeatureTextField
+        }.padding(.horizontal)
+        
+    }
+    
+    func handleNewFeatureSequence() {
+        if self.tempNewFeatureInField != "" {
+            self.listOfTempFeatures.append(self.tempNewFeatureInField)
+            self.tempNewFeatureInField = ""
+        }
+    }
+    
+}
+
+

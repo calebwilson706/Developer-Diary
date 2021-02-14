@@ -35,14 +35,12 @@ class KeyWordList : ObservableObject {
     }
     func getText() -> String {
         let path = getDocumentsDirectory().appendingPathComponent("keywordsDictionary.txt")
-        
+        print(path)
         do {
             let myData = try String(contentsOf: path)
             return myData
         } catch {
-            if error.localizedDescription == "The file “keywordsDictionary.txt” couldn’t be opened because there is no such file." {
-                FileManager().createFile(atPath: path.absoluteString, contents: "".data(using: .utf8))
-            }
+            FileManager().createFile(atPath: path.path, contents: "".data(using: .utf8))
         }
         
         return ""
